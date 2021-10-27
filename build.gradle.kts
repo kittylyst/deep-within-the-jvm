@@ -1,5 +1,6 @@
 plugins {
   `java`
+  `application`
 }
 
 repositories {
@@ -16,6 +17,17 @@ sourceSets {
       setSrcDirs(listOf("src/main/java/"))
     }
   }
+}
+
+dependencies {
+  implementation("org.ow2.asm:asm:9.2")
+  implementation("org.ow2.asm:asm-commons:9.2")
+  implementation("org.slf4j:slf4j-api:1.7.32")
+
+
+  // Once we're all on JUnit 5, only these should be needed
+  testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
 }
 
 tasks.withType<JavaCompile> {
