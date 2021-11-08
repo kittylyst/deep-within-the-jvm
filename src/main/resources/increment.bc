@@ -1,0 +1,10 @@
+       A0: aload_0
+       A1: aload_0
+       A2: getfield      #2                  // Field i:I  *** READ 17
+       A5: iconst_1
+       A6: iadd
+       A7: dup_x1
+       A8: putfield      #2                  // Field i:I  *** WRITE 18
+      A11: ireturn
+
+

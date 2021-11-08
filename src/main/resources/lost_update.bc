@@ -1,0 +1,27 @@
+  public int increment();
+    Code:
+
+       // Heap: i = [old value : 17]
+
+       A0: aload_0
+       A1: aload_0
+       A2: getfield      #2                  // Field i:I
+       A5: iconst_1
+       A6: iadd                        // [new value of i : 18] [stack A]
+
+       // Heap: i = [old value : 17]
+
+              B0: aload_0
+              B1: aload_0
+              B2: getfield      #2                  // Field i:I
+              B5: iconst_1
+              B6: iadd                 // [new value of i : 18] [stack B]
+              B7: dup_x1
+              B8: putfield      #2                  // Field i:I
+
+       // Heap: i = [new value : 18]
+
+       A7: dup_x1
+       A8: putfield      #2                  // Field i:I
+
+       // Heap: i = [new value : 18]

@@ -46,3 +46,6 @@ target/
 
 # Ignore Gradle build output directory
 build
+
+# Special case
+src/main/java/kathik/session1/extended
