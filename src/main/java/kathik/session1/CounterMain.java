@@ -26,25 +26,25 @@ public class CounterMain {
             }
         };
 
-        Thread t1 = new Thread(r);
-        Thread t2 = new Thread(r);
+        Thread tA = new Thread(r);
+        Thread tB = new Thread(r);
         long start = System.currentTimeMillis();
-        t1.start();
-        t2.start();
+        tA.start();
+        tB.start();
         try {
-            t1.join();
+            tA.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         try {
-            t2.join();
+            tB.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         long fin = System.currentTimeMillis();
         int diff = 2 * REPS - c.get();
-        System.out.println("Diff: " + diff);
+        System.out.println("Lost: " + diff);
         System.out.println("Elapsed: " + (fin - start));
     }
 

@@ -8,6 +8,8 @@ public class DictMain {
     }
 
     private void run() {
-
+        var dict = new Dictionary();
+        dict.put("a", "1");
+        dict.put("b", "2");
     }
 }

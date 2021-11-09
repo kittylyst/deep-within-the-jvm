@@ -9,6 +9,9 @@
        A5: iconst_1
        A6: iadd                        // [new value of i : 18] [stack A]
 
+/////////////////     Swap:  A -> B
+
+
        // Heap: i = [old value : 17]
 
               B0: aload_0
@@ -18,6 +21,9 @@
               B6: iadd                 // [new value of i : 18] [stack B]
               B7: dup_x1
               B8: putfield      #2                  // Field i:I
+
+/////////////////     Swap:  B -> A
+
 
        // Heap: i = [new value : 18]
 

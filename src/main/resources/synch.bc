@@ -1,0 +1,41 @@
+       A0: aload_0
+       A1: dup
+       A2: astore_1
+       A3: monitorenter
+       A4: aload_0
+       A5: aload_0
+       A6: getfield      #7                  // Field i:I
+       A9: iconst_1
+      A10: iadd
+
+/////////////////     Swap:  A -> B
+
+       0: aload_0
+       1: dup
+       2: astore_1
+       3: monitorenter
+
+/////////////////     Swap:  B -> A
+
+             A11: dup_x1
+             A12: putfield      #7                  // Field i:I
+             A15: aload_1
+             A16: monitorexit
+             A17: ireturn
+
+/////////////////     Swap:  A -> B
+
+       4: aload_0
+       5: aload_0
+       6: getfield      #7                  // Field i:I
+       9: iconst_1
+      10: iadd
+      11: dup_x1
+      12: putfield      #7                  // Field i:I
+      15: aload_1
+      16: monitorexit
+      17: ireturn
+
+
+
+

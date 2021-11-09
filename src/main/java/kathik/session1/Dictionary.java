@@ -8,9 +8,7 @@ public class Dictionary implements Map<String, String> {
 
     @Override
     public int size() {
-        Collections.synchronizedMap(this);
-
-
+//        Collections.synchronizedMap(this);
         return size;
     }
 
@@ -39,7 +37,8 @@ public class Dictionary implements Map<String, String> {
         if (key == null)
             return null;
 
-        int hash = hash(key.hashCode());
+        size = size + 1;
+        int hash = hash(key.hashCode()); // auxiliary hash
         int i = indexFor(hash, table.length);
         for (Node e = table[i]; e != null; e = e.next) {
             Object k;
@@ -68,7 +67,7 @@ public class Dictionary implements Map<String, String> {
             Object k;
             if (e.hash == hash &&
                     ((k = e.key) == key || (key != null && key.equals(k)))) {
-                size--;
+                size = size - 1;
                 if (prev == e)
                     table[i] = next;
                 else
@@ -152,6 +151,7 @@ public class Dictionary implements Map<String, String> {
         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
 
+    // Implements a hash chain
     static class Node implements Map.Entry<String,String> {
         final int hash;
         final String key;
