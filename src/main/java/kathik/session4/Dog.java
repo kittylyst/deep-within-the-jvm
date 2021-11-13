@@ -6,6 +6,10 @@ public class Dog extends Pet implements Furry {
         super(name);
     }
 
+    public Dog(String name, int age) {
+        super(name, age);
+    }
+
     @Override
     public void groom() {
         System.out.println(name()+ " likes being groomed");
