@@ -1,4 +1,4 @@
-package kathik.session1;
+package kathik.counters;
 
 /**
  * @author ben

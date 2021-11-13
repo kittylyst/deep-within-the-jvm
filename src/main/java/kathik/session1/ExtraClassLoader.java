@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * This classloader is constructed by passing a String of extra filesystem locations
@@ -21,7 +22,7 @@ public final class ExtraClassLoader extends ClassLoader {
     public ExtraClassLoader(String extraPath) {
         super(ExtraClassLoader.class.getClassLoader());
         var dirs = extraPath.split(":");
-        extraDirs = Arrays.stream(dirs).map(s -> Path.of(s)).toList();
+        extraDirs = Arrays.stream(dirs).map(s -> Path.of(s)).collect(Collectors.toList());
     }
 
     protected Class<?> findClass(String name) throws ClassNotFoundException {
