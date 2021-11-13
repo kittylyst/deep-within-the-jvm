@@ -1,4 +1,4 @@
-package kathik.session4;
+package kathik.session4.pets;
 
 public class Bear extends java.lang.Object implements Furry {
     @Override

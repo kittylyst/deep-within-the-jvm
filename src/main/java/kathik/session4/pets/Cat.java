@@ -1,4 +1,4 @@
-package kathik.session4;
+package kathik.session4.pets;
 
 public class Cat extends Pet implements Furry {
     public Cat(String name) {
@@ -14,12 +14,7 @@ public class Cat extends Pet implements Furry {
         System.out.println("The cat "+ name() +" grooms themself");
     }
 
-    @Override
-    public void feed() {
-        System.out.println("Silence food ape, "+ name() + " is eating");
-    }
-
     public void purr() {
-        System.out.println(name() + " purrs. Why would you disturb them?");
+        System.out.println("Silence food ape, "+ name() + " is purring. Why would you disturb them?");
     }
 }

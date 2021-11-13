@@ -1,6 +1,6 @@
-package kathik.session4;
+package kathik.session4.pets;
 
-public class Pet extends java.lang.Object {
+public abstract class Pet extends java.lang.Object {
     private final String name;
     private int age;
 
@@ -30,10 +30,4 @@ public class Pet extends java.lang.Object {
         System.out.println("Shh! "+ name + " is eating");
     }
 
-    @Override
-    public String toString() {
-        return "Pet{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }
