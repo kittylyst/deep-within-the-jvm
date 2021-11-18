@@ -14,9 +14,11 @@ public final class AtomicCounter implements Counter {
     // setup to use Unsafe.compareAndSwapInt for updates
     static {
         try {
+            // Grab a copy of unsafe
             Field f = Unsafe.class.getDeclaredField("theUnsafe");
             f.setAccessible(true);
             unsafe = (Unsafe) f.get(null);
+            //
             valueOffset = unsafe.objectFieldOffset(AtomicCounter.class.getDeclaredField("value"));
             System.out.println("Offset: "+ valueOffset);
         } catch (Exception ex) { throw new Error(ex); }

@@ -8,4 +8,4 @@ public class Structural {
                 }
             }).bar();
         }
-    }
+}
