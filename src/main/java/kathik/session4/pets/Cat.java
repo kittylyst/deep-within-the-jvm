@@ -17,4 +17,13 @@ public class Cat extends Pet implements Furry {
     public void purr() {
         System.out.println("Silence food ape, "+ name() + " is purring. Why would you disturb them?");
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Cat{");
+        sb.append("name='").append(name()).append('\'');
+        sb.append(", age=").append(age());
+        sb.append('}');
+        return sb.toString();
+    }
 }

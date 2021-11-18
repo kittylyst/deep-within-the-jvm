@@ -9,8 +9,10 @@ public class PetsMain {
     private void run() {
         var jesús = new Veterinarian("Jesús");
         var sara = new Veterinarian("Sara");
-        var mariano = new Cat("Marianito");
+        Cat mariano = new Cat("Marianito");
+        jesús.careFor(mariano);
 
-
+        System.out.println(mariano.name());
+        System.out.println(Veterinarian.isOpenToday());
     }
 }
