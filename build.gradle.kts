@@ -31,7 +31,15 @@ dependencies {
 }
 
 tasks.withType<JavaCompile> {
-  options.compilerArgs = listOf()
+  options.compilerArgs = listOf("--enable-preview", "-source 17")
+  options.release.set(17)
+
+}
+
+tasks.withType<Javadoc>().configureEach {
+  with(options as StandardJavadocDocletOptions) {
+    source = "17"
+  }
 }
 
 tasks.jar {
