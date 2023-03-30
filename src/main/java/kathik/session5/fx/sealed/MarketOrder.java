@@ -10,5 +10,5 @@ public record MarketOrder(int units,
                           Side side,
                           LocalDateTime sentAt,
                           boolean allOrNothing) implements FXOrder {
-    // constructors and factories ommitted
+    // constructors and factories omitted
 }

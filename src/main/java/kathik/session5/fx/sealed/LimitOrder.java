@@ -11,5 +11,5 @@ public record LimitOrder(int units,
                          LocalDateTime sentAt,
                          double price,
                          int ttl) implements FXOrder {
-    // constructors and factories ommitted
+    // constructors and factories omitted
 }

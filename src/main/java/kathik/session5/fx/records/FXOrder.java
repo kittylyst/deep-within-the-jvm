@@ -12,6 +12,7 @@ public record FXOrder(int units,
                       LocalDateTime sentAt,
                       int ttl) {
 
+    // Compact constructor
     public FXOrder {
         if (units < 1) {
             throw new IllegalArgumentException("FXOrder units must be positive");

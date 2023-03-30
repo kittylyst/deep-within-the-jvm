@@ -28,7 +28,7 @@ public class CrashTheVM {
 
     // Loom-specific code?
 //    public static Thread makeThread(Runnable r) {
-//        return Thread.builder().virtual().task(r).build();
+//        return Thread.ofVirtual().unstarted(r);
 //    }
 
     public static void main(String[] args) {
